@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-21T14:46:02.883098" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="/Users/batkantapon/Desktop/robotframeworkbydanny/AutomateTestingWEB/RunningTestCase/TestCase.robot">
+<test id="s1-t1" name="เปิด browser และไปที่ Link https://www.nejavu.com" line="8">
+<kw name="Start to open browser" owner="GobalKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:03.341892" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-21T14:46:03.341627" elapsed="6.080272"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-21T14:46:09.422774" elapsed="0.320919"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:09.744198" level="INFO">Opening url 'http://www.nejavu.com'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-21T14:46:09.743938" elapsed="4.104096"/>
+</kw>
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2024-07-21T14:46:13.848276" elapsed="0.017870"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:03.340711" elapsed="10.525805"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:03.339764" elapsed="10.527365"/>
+</test>
+<test id="s1-t2" name="ตรวจสอบ Banner Pop-up" line="10">
+<kw name="Verify Banner Pop-up" owner="GobalKeywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${close-popup-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:13.870907" elapsed="0.099641"/>
+</kw>
+<msg time="2024-07-21T14:46:13.970741" level="INFO">${popup-status} = True</msg>
+<var>${popup-status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${close-popup-button}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-07-21T14:46:13.870177" elapsed="0.100595"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:13.971656" level="INFO">Clicking element '//*[@id="top"]/main/div[2]/div[1]/a'.</msg>
+<arg>${close-popup-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:13.971431" elapsed="0.092055"/>
+</kw>
+<arg>'${popup-status}'=='True'</arg>
+<arg>Click Element</arg>
+<arg>${close-popup-button}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-21T14:46:13.970979" elapsed="0.092709"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:13.869579" elapsed="0.194272"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:13.867915" elapsed="0.196265"/>
+</test>
+<test id="s1-t3" name="Click menu &quot;การ์ตูน&quot;" line="12">
+<kw name="Go to Cartoon Menu" owner="ShoppingInOnTheCartoonMenu">
+<kw name="Accept the cookie button" owner="GobalKeywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${cookie-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.066395" elapsed="0.048786"/>
+</kw>
+<msg time="2024-07-21T14:46:14.115335" level="INFO">${cookie-status} = True</msg>
+<var>${cookie-status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${cookie-button}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.066218" elapsed="0.049147"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:14.116074" level="INFO">Clicking element '//*[@id="top"]/main/div[4]/div/small/small/div/div[1]/button'.</msg>
+<arg>${cookie-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.115848" elapsed="0.525713"/>
+</kw>
+<arg>'${cookie-status}'=='True'</arg>
+<arg>Click Element</arg>
+<arg>${cookie-button}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.115530" elapsed="0.526195"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${cookie-button}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.641971" elapsed="0.037267"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:14.065953" elapsed="0.613395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:14.679733" level="INFO">Clicking element '//*[@id="top"]/main/div[1]/div[2]/div[2]/div[2]/nav/div/ul/li[3]/a'.</msg>
+<arg>${cartoon-menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:14.679501" elapsed="2.308846"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:14.065606" elapsed="2.922931"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:14.064986" elapsed="2.923992"/>
+</test>
+<test id="s1-t4" name="Get ชื่อหนังสือทุกเล่มไหนแถวที่หนึ่ง" line="14">
+<kw name="Get books name" owner="ShoppingInOnTheCartoonMenu">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-07-21T14:46:16.992893" level="INFO">${BookNames} = []</msg>
+<var>${BookNames}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-07-21T14:46:16.992585" elapsed="0.000379"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:16.995391" level="INFO">${j} = 1</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:16.994304" elapsed="0.001149"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:16.996157" level="INFO">${re-books-name-element} = //*[@id="top"]/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[1]/div/div[2]/a[1]/h5</msg>
+<var>${re-books-name-element}</var>
+<arg>${books-name-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:16.995727" elapsed="0.000480"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.042636" level="INFO">${BookName} = โบรุโตะ -ทู บลู วอร์เทกซ์- เล่ม 1</msg>
+<var>${BookName}</var>
+<arg>${re-books-name-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:16.996486" elapsed="0.046213"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames}</arg>
+<arg>${BookName}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.042938" elapsed="0.000288"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-07-21T14:46:16.994056" elapsed="0.049234"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.043820" level="INFO">${j} = 2</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.043557" elapsed="0.000292"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:17.044207" level="INFO">${re-books-name-element} = //*[@id="top"]/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[2]/div/div[2]/a[1]/h5</msg>
+<var>${re-books-name-element}</var>
+<arg>${books-name-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.043965" elapsed="0.000450"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.064784" level="INFO">${BookName} = ชุด SOLANIN เพลงนี้ของเราสองคน เล่ม 1-2 (จบ)</msg>
+<var>${BookName}</var>
+<arg>${re-books-name-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.044572" elapsed="0.020266"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames}</arg>
+<arg>${BookName}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.065026" elapsed="0.000240"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-07-21T14:46:17.043440" elapsed="0.021897"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.065910" level="INFO">${j} = 3</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.065725" elapsed="0.000212"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:17.066236" level="INFO">${re-books-name-element} = //*[@id="top"]/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[3]/div/div[2]/a[1]/h5</msg>
+<var>${re-books-name-element}</var>
+<arg>${books-name-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.066048" elapsed="0.000213"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.087113" level="INFO">${BookName} = COLOR COLLECTION (เล่มเดียวจบ)</msg>
+<var>${BookName}</var>
+<arg>${re-books-name-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.066375" elapsed="0.020779"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames}</arg>
+<arg>${BookName}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.087323" elapsed="0.000189"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-07-21T14:46:17.065609" elapsed="0.021954"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.087962" level="INFO">${j} = 4</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.087799" elapsed="0.000187"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:17.088257" level="INFO">${re-books-name-element} = //*[@id="top"]/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[4]/div/div[2]/a[1]/h5</msg>
+<var>${re-books-name-element}</var>
+<arg>${books-name-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.088088" elapsed="0.000193"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.107758" level="INFO">${BookName} = SHY ฮีโร่ขี้อายหัวใจไฟเตอร์ เล่ม 4</msg>
+<var>${BookName}</var>
+<arg>${re-books-name-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.088420" elapsed="0.019383"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames}</arg>
+<arg>${BookName}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.107984" elapsed="0.000234"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-07-21T14:46:17.087705" elapsed="0.020576"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.108972" level="INFO">${j} = 5</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.108584" elapsed="0.000436"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:17.109790" level="INFO">${re-books-name-element} = //*[@id="top"]/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[5]/div/div[2]/a[1]/h5</msg>
+<var>${re-books-name-element}</var>
+<arg>${books-name-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.109234" elapsed="0.000618"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.128245" level="INFO">${BookName} = วะวะวะวะแวมไพร์กับนายเวอร์จิ้น เล่ม 3</msg>
+<var>${BookName}</var>
+<arg>${re-books-name-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.110045" elapsed="0.018244"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames}</arg>
+<arg>${BookName}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.128580" elapsed="0.000223"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-07-21T14:46:17.108427" elapsed="0.020437"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>6</value>
+<status status="PASS" start="2024-07-21T14:46:16.993300" elapsed="0.135621"/>
+</for>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.129538" level="INFO">${BookNames} = ['โบรุโตะ -ทู บลู วอร์เทกซ์- เล่ม 1', 'ชุด SOLANIN เพลงนี้ของเราสองคน เล่ม 1-2 (จบ)', 'COLOR COLLECTION (เล่มเดียวจบ)', 'SHY ฮีโร่ขี้อายหัวใจไฟเตอร์ เล่ม 4', 'วะวะวะวะแวมไพร์กับนายเวอร์จิ้น เล่ม 3']</msg>
+<arg>${BookNames}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.129124" elapsed="0.000481"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:16.992034" elapsed="0.137654"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:16.989941" elapsed="0.140070"/>
+</test>
+<test id="s1-t5" name="กดปุ่ม &quot;ใส่ตะกร้า&quot; หนังสือทุกเล่มแถวที่หนึ่ง" line="16">
+<kw name="add a book to cart" owner="ShoppingInOnTheCartoonMenu">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:17.133310" level="INFO">${j} = 1</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.133093" elapsed="0.000248"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:17.133657" level="INFO">${re-addtocart-button} = //html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[1]/div/div[3]/div[2]</msg>
+<var>${re-addtocart-button}</var>
+<arg>${addtocart-button}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.133465" elapsed="0.000218"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:17.133979" level="INFO">Clicking element '//html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[1]/div/div[3]/div[2]'.</msg>
+<arg>${re-addtocart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.133798" elapsed="0.158228"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:18.793288" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:17.292729" elapsed="1.500825"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-07-21T14:46:17.132964" elapsed="1.660892"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:18.794994" level="INFO">${j} = 2</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:18.794530" elapsed="0.000529"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:18.795843" level="INFO">${re-addtocart-button} = //html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[2]/div/div[3]/div[2]</msg>
+<var>${re-addtocart-button}</var>
+<arg>${addtocart-button}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:18.795362" elapsed="0.000548"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:18.796686" level="INFO">Clicking element '//html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[2]/div/div[3]/div[2]'.</msg>
+<arg>${re-addtocart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:18.796222" elapsed="0.121058"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:20.417841" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:18.917501" elapsed="1.500543"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-07-21T14:46:18.794265" elapsed="1.623917"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:20.419205" level="INFO">${j} = 3</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:20.418760" elapsed="0.000502"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:20.420101" level="INFO">${re-addtocart-button} = //html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[3]/div/div[3]/div[2]</msg>
+<var>${re-addtocart-button}</var>
+<arg>${addtocart-button}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:20.419574" elapsed="0.000600"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:20.420988" level="INFO">Clicking element '//html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[3]/div/div[3]/div[2]'.</msg>
+<arg>${re-addtocart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:20.420550" elapsed="0.097142"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:22.020608" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:20.517889" elapsed="1.503019"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-07-21T14:46:20.418500" elapsed="1.602707"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:22.023669" level="INFO">${j} = 4</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:22.022472" elapsed="0.001323"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:22.025064" level="INFO">${re-addtocart-button} = //html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[4]/div/div[3]/div[2]</msg>
+<var>${re-addtocart-button}</var>
+<arg>${addtocart-button}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:22.024456" elapsed="0.000676"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:22.025849" level="INFO">Clicking element '//html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[4]/div/div[3]/div[2]'.</msg>
+<arg>${re-addtocart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:22.025450" elapsed="0.105635"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:23.632943" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:22.131397" elapsed="1.501782"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-07-21T14:46:22.021934" elapsed="1.611415"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:23.634377" level="INFO">${j} = 5</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:23.633915" elapsed="0.000521"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:23.639983" level="INFO">${re-addtocart-button} = //html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[5]/div/div[3]/div[2]</msg>
+<var>${re-addtocart-button}</var>
+<arg>${addtocart-button}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:23.634696" elapsed="0.005394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:23.641429" level="INFO">Clicking element '//html/body/main/div[1]/div[3]/div[1]/div[6]/div[2]/div[5]/div/div[3]/div[2]'.</msg>
+<arg>${re-addtocart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:23.640889" elapsed="0.101611"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:25.244480" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:23.742821" elapsed="1.502001"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-07-21T14:46:23.633672" elapsed="1.611338"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>6</value>
+<status status="PASS" start="2024-07-21T14:46:17.132681" elapsed="8.112470"/>
+</for>
+<status status="PASS" start="2024-07-21T14:46:17.132340" elapsed="8.113071"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:17.130529" elapsed="8.115274"/>
+</test>
+<test id="s1-t6" name="กดปุ่ม &quot;รถเข็น / ตระกร้า&quot;" line="18">
+<kw name="Go to Cart" owner="GotoCart">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:27.250647" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:25.249489" elapsed="2.001312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:27.251472" level="INFO">Clicking element '//*[@id="top"]/main/div[1]/div[1]/div/div/div[2]/div/div[4]/ul/li[2]/div'.</msg>
+<arg>${Cart-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:27.251087" elapsed="1.021134"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:25.248901" elapsed="3.023459"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:25.246464" elapsed="3.026151"/>
+</test>
+<test id="s1-t7" name="verify ชื่อหนังสือทุกเล่ม ที่อยู่ในตระกร้า โดยใช้ชื่อที่มาได้มาจากข้อที่แล้ว" line="20">
+<kw name="Verify all the books" owner="ShoppingInOnTheCartoonMenu">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.280290" level="INFO">${BookNames-Verify} = []</msg>
+<var>${BookNames-Verify}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.278855" elapsed="0.001496"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.283031" level="INFO">${j} = 2</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.281842" elapsed="0.001262"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:28.283793" level="INFO">${re-books-name-verify-element} = //*[@id="cart"]/div[2]/div[2]/div[1]/div/div[2]/p[1]/strong</msg>
+<var>${re-books-name-verify-element}</var>
+<arg>${books-name-verify-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.283404" elapsed="0.000440"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.339724" level="INFO">${BookName-Verify} = โบรุโตะ -ทู บลู วอร์เทกซ์- เล่ม 1</msg>
+<var>${BookName-Verify}</var>
+<arg>${re-books-name-verify-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.284097" elapsed="0.055695"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames-Verify}</arg>
+<arg>${BookName-Verify}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.340030" elapsed="0.000312"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${BookNames}[${i-2}]</arg>
+<arg>${BookNames-Verify}[${i-2}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.340592" elapsed="0.002101"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-07-21T14:46:28.281473" elapsed="0.061345"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.343670" level="INFO">${j} = 3</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.343297" elapsed="0.000420"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:28.344276" level="INFO">${re-books-name-verify-element} = //*[@id="cart"]/div[2]/div[3]/div[1]/div/div[2]/p[1]/strong</msg>
+<var>${re-books-name-verify-element}</var>
+<arg>${books-name-verify-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.343926" elapsed="0.000394"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.366928" level="INFO">${BookName-Verify} = ชุด SOLANIN เพลงนี้ของเราสองคน เล่ม 1-2 (จบ)</msg>
+<var>${BookName-Verify}</var>
+<arg>${re-books-name-verify-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.344617" elapsed="0.022358"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames-Verify}</arg>
+<arg>${BookName-Verify}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.367150" elapsed="0.000223"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${BookNames}[${i-2}]</arg>
+<arg>${BookNames-Verify}[${i-2}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.367530" elapsed="0.001148"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-07-21T14:46:28.343076" elapsed="0.025683"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.369782" level="INFO">${j} = 4</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.369244" elapsed="0.000590"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:28.370270" level="INFO">${re-books-name-verify-element} = //*[@id="cart"]/div[2]/div[4]/div[1]/div/div[2]/p[1]/strong</msg>
+<var>${re-books-name-verify-element}</var>
+<arg>${books-name-verify-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.370041" elapsed="0.000256"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.392531" level="INFO">${BookName-Verify} = COLOR COLLECTION (เล่มเดียวจบ)</msg>
+<var>${BookName-Verify}</var>
+<arg>${re-books-name-verify-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.370439" elapsed="0.022135"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames-Verify}</arg>
+<arg>${BookName-Verify}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.392745" elapsed="0.000204"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${BookNames}[${i-2}]</arg>
+<arg>${BookNames-Verify}[${i-2}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.393089" elapsed="0.000995"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-07-21T14:46:28.368992" elapsed="0.025159"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.394733" level="INFO">${j} = 5</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.394506" elapsed="0.000274"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:28.395133" level="INFO">${re-books-name-verify-element} = //*[@id="cart"]/div[2]/div[5]/div[1]/div/div[2]/p[1]/strong</msg>
+<var>${re-books-name-verify-element}</var>
+<arg>${books-name-verify-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.394921" elapsed="0.000239"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.415370" level="INFO">${BookName-Verify} = SHY ฮีโร่ขี้อายหัวใจไฟเตอร์ เล่ม 4</msg>
+<var>${BookName-Verify}</var>
+<arg>${re-books-name-verify-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.395330" elapsed="0.020107"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames-Verify}</arg>
+<arg>${BookName-Verify}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.415621" elapsed="0.000209"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${BookNames}[${i-2}]</arg>
+<arg>${BookNames-Verify}[${i-2}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.415966" elapsed="0.001602"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-07-21T14:46:28.394371" elapsed="0.023304"/>
+</iter>
+<iter>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-07-21T14:46:28.418340" level="INFO">${j} = 6</msg>
+<var>${j}</var>
+<arg>${i}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.417991" elapsed="0.000388"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-07-21T14:46:28.419016" level="INFO">${re-books-name-verify-element} = //*[@id="cart"]/div[2]/div[6]/div[1]/div/div[2]/p[1]/strong</msg>
+<var>${re-books-name-verify-element}</var>
+<arg>${books-name-verify-element}</arg>
+<arg>replacestr</arg>
+<arg>${j}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.418601" elapsed="0.000508"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.439842" level="INFO">${BookName-Verify} = วะวะวะวะแวมไพร์กับนายเวอร์จิ้น เล่ม 3</msg>
+<var>${BookName-Verify}</var>
+<arg>${re-books-name-verify-element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.419805" elapsed="0.020091"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${BookNames-Verify}</arg>
+<arg>${BookName-Verify}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.440105" elapsed="0.000265"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${BookNames}[${i-2}]</arg>
+<arg>${BookNames-Verify}[${i-2}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.440742" elapsed="0.001320"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-07-21T14:46:28.417850" elapsed="0.024293"/>
+</iter>
+<var>${i}</var>
+<value>2</value>
+<value>7</value>
+<status status="PASS" start="2024-07-21T14:46:28.280665" elapsed="0.161538"/>
+</for>
+<status status="PASS" start="2024-07-21T14:46:28.278374" elapsed="0.164053"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:28.272974" elapsed="0.169699"/>
+</test>
+<test id="s1-t8" name="ลบหนังสือทุกเล่มที่อยู่ในตระกร้า" line="22">
+<kw name="Delete all the books" owner="RemoveItemInTheCart">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.459012" level="INFO">${countBooks} = 6</msg>
+<var>${countBooks}</var>
+<arg>${countBooks-Element}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.444945" elapsed="0.014135"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.460306" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.459912" elapsed="0.078715"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm-delete-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.539152" elapsed="0.258006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:28.799720" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${confirm-delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.797492" elapsed="0.102103"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:31.901080" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:28.899777" elapsed="3.001412"/>
+</kw>
+<var name="${j}">2</var>
+<status status="PASS" start="2024-07-21T14:46:28.459659" elapsed="3.441649"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:31.901892" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:31.901655" elapsed="0.063366"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm-delete-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:31.965279" elapsed="3.108372"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:35.088792" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${confirm-delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:35.083335" elapsed="0.098457"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:38.182448" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:35.181971" elapsed="3.000811"/>
+</kw>
+<var name="${j}">3</var>
+<status status="PASS" start="2024-07-21T14:46:31.901507" elapsed="6.281511"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:38.184960" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:38.183975" elapsed="0.103203"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm-delete-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:38.294133" elapsed="0.267760"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:38.562572" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${confirm-delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:38.562193" elapsed="0.074100"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:41.637403" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:38.636515" elapsed="3.001316"/>
+</kw>
+<var name="${j}">4</var>
+<status status="PASS" start="2024-07-21T14:46:38.183541" elapsed="3.454526"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:41.639735" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:41.639073" elapsed="0.080369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm-delete-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:41.719675" elapsed="0.251290"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:41.971963" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${confirm-delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:41.971301" elapsed="0.083235"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:45.057248" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:42.054756" elapsed="3.002808"/>
+</kw>
+<var name="${j}">5</var>
+<status status="PASS" start="2024-07-21T14:46:41.638603" elapsed="3.419187"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:45.059469" level="INFO">Clicking element '//*[@id="cart"]/div[2]/div[2]/div[5]/a'.</msg>
+<arg>${delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:45.058761" elapsed="0.087431"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${confirm-delete-button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:45.146509" elapsed="0.248837"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:45.396506" level="INFO">Clicking element '//*[@id="top"]/div/div/div[3]/button[1]'.</msg>
+<arg>${confirm-delete-button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-21T14:46:45.395901" elapsed="0.076505"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-21T14:46:48.473289" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-21T14:46:45.472773" elapsed="3.000747"/>
+</kw>
+<var name="${j}">6</var>
+<status status="PASS" start="2024-07-21T14:46:45.058333" elapsed="3.415350"/>
+</iter>
+<var>${j}</var>
+<value>2</value>
+<value>${countBooks}+1</value>
+<status status="PASS" start="2024-07-21T14:46:28.459259" elapsed="20.014570"/>
+</for>
+<status status="PASS" start="2024-07-21T14:46:28.444590" elapsed="20.029498"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:28.443052" elapsed="20.031482"/>
+</test>
+<test id="s1-t9" name="Verify bagde บนรถเข็นว่าเหลือหนังสือ = 0" line="24">
+<kw name="Verify empty cart" owner="RemoveItemInTheCart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${txtemptycart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-21T14:46:48.478606" elapsed="0.063666"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-21T14:46:48.543354" level="INFO">Verifying element '//*[@id="top"]/main/div[1]/div[3]/div[1]/div/div/h2' contains exact text 'ยังไม่มีรายการสินค้าในตะกร้า โปรดสั่งซื้อสินค้า'.</msg>
+<arg>${txtemptycart}</arg>
+<arg>ยังไม่มีรายการสินค้าในตะกร้า โปรดสั่งซื้อสินค้า</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-21T14:46:48.542701" elapsed="0.052134"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:48.477860" elapsed="0.117615"/>
+</kw>
+<status status="PASS" start="2024-07-21T14:46:48.475452" elapsed="0.120302"/>
+</test>
+<status status="PASS" start="2024-07-21T14:46:02.888004" elapsed="45.710618"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
